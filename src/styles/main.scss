@@ -71,6 +71,59 @@ body,html{
 
     &__form{
         margin-top: 3em;
+        // display: flex;
+        // flex-direction: column;
+        // gap: .5em;
+
+        &__info{
+            display: flex;
+            justify-content: space-between;
+
+            label, .span-error{
+                font-size: .9em;
+                font-weight: 700;
+            }
+        }
+
+        input, &__btn{
+            width: 100%;
+            padding: 1.4em;
+            border-radius: 8px;
+            font-size: 1em;
+            border: 1px solid;
+            outline: none;
+            margin-top: 1em;
+        }
+        
+        input{
+            border-color: hsl(0, 0%,58%);
+        }
+
+        .span-error{
+            color: red;
+            text-align: right;
+            display: block;
+        }
+        
+        .input-error{
+            color: red;
+            border-color: red;
+            background-color: #ffdbdb;
+        }
+        
+        &__btn{
+            cursor: pointer;
+            outline: none;
+            border-color: hsl(234, 29%, 20%) ;
+            background-color: hsl(234, 29%, 20%);
+            color: hsl(0, 0%, 100%);
+            font-weight: 700;
+            transition: transform 0.3s ease;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
     }
 
 }

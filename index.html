@@ -16,7 +16,7 @@
 <body>
 
     <div class="container">
-        <div class="container__style">
+        <!-- <div class="container__style">
             <div class="description">
                 <h1 class="description__title">Stay updated!</h1>
                 <p class="description__join">
@@ -37,16 +37,35 @@
                     </li>
                 </ul>
 
-                <form action="" class="description__form">
+                <form action="" class="description__form" id="form">
                     <div class="description__form__info">
                         <label for="email">Email address</label>
-                        <span style="display: none;">valid email required</span>
+                        <span style="display: none;" id="spanError">valid email required</span>
                     </div>
-                    <input type="email" name="email" id="email" placeholder="email@company.com">
-                    <button type="submit" class="description__form__btn">Subscribe to monthly newsletter</button>
+                    <input type="email" name="email" id="inputEmail" placeholder="email@company.com">
+                    <button type="submit" class="description__form__btn" id="inputBtn">Subscribe to monthly
+                        newsletter
+                    </button>
                 </form>
             </div>
             <img src="./build/assets/images/illustration-sign-up-desktop.svg" alt="">
+        </div> -->
+
+
+        <div class="message">
+            <img src="./build/assets/images/icon-success.svg" alt="">
+            <div class="message__successes">
+                <h2 class="message__successes__title">
+                    Thanks for subscribing!
+                </h2>
+                <p class="message__successes__pSuccesses">
+                    A confirmation email has been sent to ash@loremcompany.com.
+                    Please open it and click the button inside to confirm your subscription.
+                </p>
+            </div>
+            <button type="" class="message__btn">
+                Dismiss message
+            </button>
         </div>
 
     </div>
@@ -57,12 +76,11 @@
 
     <!-- Success message start -->
 
-    <!-- Thanks for subscribing!
+    <!-- 
 
-    A confirmation email has been sent to ash@loremcompany.com.
-    Please open it and click the button inside to confirm your subscription.
+    
 
-    Dismiss message -->
+     -->
 
     <!-- Success message end -->
 

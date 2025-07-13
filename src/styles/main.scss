@@ -1,3 +1,7 @@
+@use 'message';
+@use 'mixins';
+
+
 *{
     padding: 0;
     margin: 0;
@@ -112,17 +116,7 @@ body,html{
         }
         
         &__btn{
-            cursor: pointer;
-            outline: none;
-            border-color: hsl(234, 29%, 20%) ;
-            background-color: hsl(234, 29%, 20%);
-            color: hsl(0, 0%, 100%);
-            font-weight: 700;
-            transition: transform 0.3s ease;
-
-            &:hover{
-                transform: scale(1.1);
-            }
+            @include mixins.btn;
         }
     }
 

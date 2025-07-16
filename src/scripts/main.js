@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded',function(){
 
     const form = document.getElementById('form')
-    const btnForm = document.getElementById('inputBtn')
     
     const spanError = document.getElementById('spanError')
     
@@ -21,11 +20,5 @@ document.addEventListener('DOMContentLoaded',function(){
             spanError.classList.remove('span-error')
             spanError.style.display = 'none'
         }
-
-
     })
-
-
-
-
 })

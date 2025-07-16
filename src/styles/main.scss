@@ -126,3 +126,57 @@ body,html{
 
 
 
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .container{
+        width: 90%;
+        &__style{
+            margin: 2em 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        picture{
+            order: -1;
+        }
+
+    }
+}
+
+
+
+
+@media (max-width: 600px){
+
+    body,html{
+        background-color: hsl(0, 0%, 100%); 
+    }
+
+     .container{
+         width: 90%;
+         min-height: 100%;
+         &__style{
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            // overflow-x: auto;
+        }
+
+        picture{
+            order: -1;
+
+            img{
+                width: 100vw;
+            }
+        }
+    }
+
+    .description{
+        padding: 2em;
+        width: 100%;
+    }
+}

@@ -16,7 +16,7 @@
 <body>
 
     <div class="container">
-        <!-- <div class="container__style">
+        <div class="container__style">
             <div class="description">
                 <h1 class="description__title">Stay updated!</h1>
                 <p class="description__join">
@@ -48,11 +48,16 @@
                     </button>
                 </form>
             </div>
-            <img src="./build/assets/images/illustration-sign-up-desktop.svg" alt="">
-        </div> -->
+            <picture>
+                <source media="(max-width: 600px)" srcset="./build/assets/images/illustration-sign-up-mobile.svg">
+                <source media="(max-width: 1024px)" srcset="./build/assets/images/illustration-sign-up-tablet.svg">
+                <source media="(max-width: 1025px)" srcset="./build/assets/images/illustration-sign-up-desktop.svg">
+                <img src="./build/assets/images/illustration-sign-up-desktop.svg" alt="">
+            </picture>
+        </div>
 
 
-        <div class="message">
+        <!-- <div class="message">
             <img src="./build/assets/images/icon-success.svg" alt="">
             <div class="message__successes">
                 <h2 class="message__successes__title">
@@ -66,7 +71,7 @@
             <button type="" class="message__btn">
                 Dismiss message
             </button>
-        </div>
+        </div> -->
 
     </div>
 

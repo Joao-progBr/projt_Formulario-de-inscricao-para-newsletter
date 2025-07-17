@@ -16,63 +16,65 @@
 <body>
 
     <div class="container">
-        <div class="container__style">
-            <div class="description">
-                <h1 class="description__title">Stay updated!</h1>
-                <p class="description__join">
-                    Join 60,000+ product managers receiving monthly updates on:
-                </p>
-                <ul class="description__list">
-                    <li class="description__list__item">
-                        <img src="./build/assets/images/icon-list.svg" alt="Icon">
-                        <p>Product discovery and building what matters</p>
-                    </li>
-                    <li class="description__list__item">
-                        <img src="./build/assets/images/icon-list.svg" alt="Icon">
-                        <p>Measuring to ensure updates are a success</p>
-                    </li>
-                    <li class="description__list__item">
-                        <img src="./build/assets/images/icon-list.svg" alt="Icon">
-                        <p>And much more!</p>
-                    </li>
-                </ul>
+        <div id="formSection">
+            <div class="container__style">
+                <div class="description">
+                    <h1 class="description__title">Stay updated!</h1>
+                    <p class="description__join">
+                        Join 60,000+ product managers receiving monthly updates on:
+                    </p>
+                    <ul class="description__list">
+                        <li class="description__list__item">
+                            <img src="./build/assets/images/icon-list.svg" alt="Icon">
+                            <p>Product discovery and building what matters</p>
+                        </li>
+                        <li class="description__list__item">
+                            <img src="./build/assets/images/icon-list.svg" alt="Icon">
+                            <p>Measuring to ensure updates are a success</p>
+                        </li>
+                        <li class="description__list__item">
+                            <img src="./build/assets/images/icon-list.svg" alt="Icon">
+                            <p>And much more!</p>
+                        </li>
+                    </ul>
 
-                <form action="" class="description__form" id="form">
-                    <div class="description__form__info">
-                        <label for="email">Email address</label>
-                        <span style="display: none;" id="spanError">valid email required</span>
-                    </div>
-                    <input type="email" name="email" id="inputEmail" placeholder="email@company.com">
-                    <button type="submit" class="description__form__btn" id="inputBtn">Subscribe to monthly
-                        newsletter
-                    </button>
-                </form>
+                    <form action="" class="description__form" id="form">
+                        <div class="description__form__info">
+                            <label for="email">Email address</label>
+                            <span style="display: none;" id="spanError">valid email required</span>
+                        </div>
+                        <input type="email" name="email" id="inputEmail" placeholder="email@company.com">
+                        <button type="submit" class="description__form__btn" id="inputBtn">Subscribe to monthly
+                            newsletter
+                        </button>
+                    </form>
+                </div>
+                <picture>
+                    <source media="(max-width: 600px)" srcset="./build/assets/images/illustration-sign-up-mobile.svg">
+                    <source media="(max-width: 1024px)" srcset="./build/assets/images/illustration-sign-up-tablet.svg">
+                    <source media="(max-width: 1025px)" srcset="./build/assets/images/illustration-sign-up-desktop.svg">
+                    <img src="./build/assets/images/illustration-sign-up-desktop.svg" alt="">
+                </picture>
             </div>
-            <picture>
-                <source media="(max-width: 600px)" srcset="./build/assets/images/illustration-sign-up-mobile.svg">
-                <source media="(max-width: 1024px)" srcset="./build/assets/images/illustration-sign-up-tablet.svg">
-                <source media="(max-width: 1025px)" srcset="./build/assets/images/illustration-sign-up-desktop.svg">
-                <img src="./build/assets/images/illustration-sign-up-desktop.svg" alt="">
-            </picture>
         </div>
 
 
-        <!-- <div class="message">
+
+        <div class="message" id="successMessage" style="display: none;">
             <img src="./build/assets/images/icon-success.svg" alt="">
             <div class="message__successes">
                 <h2 class="message__successes__title">
                     Thanks for subscribing!
                 </h2>
                 <p class="message__successes__pSuccesses">
-                    A confirmation email has been sent to ash@loremcompany.com.
+                    A confirmation email has been sent to <b><span id="userEmail"></span>.</b>
                     Please open it and click the button inside to confirm your subscription.
                 </p>
             </div>
-            <button type="" class="message__btn">
+            <button type="" class="message__btn" id="dismissBtn">
                 Dismiss message
             </button>
-        </div> -->
-
+        </div>
     </div>
 
 

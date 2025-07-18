@@ -1,16 +1,17 @@
 document.addEventListener('DOMContentLoaded',function(){
 
     const form = document.getElementById('form')
-    const spanError = document.getElementById('spanError')
     const successMessage = document.getElementById('successMessage')
     const userEmail = document.getElementById('userEmail')
     const formSection = document.getElementById('formSection')
     const dismissBtn = document.getElementById('dismissBtn')
+    const spanError = document.getElementById('spanError')
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     
     form.addEventListener('submit', function(e){
-        const inputEmail = document.getElementById('inputEmail')
         e.preventDefault()
-        if(inputEmail.value === '' || !inputEmail.checkValidity()){
+        const inputEmail = document.getElementById('inputEmail')
+        if(inputEmail.value === '' || !emailRegex.test(inputEmail.value)){
             inputEmail.classList.add('input-error')
             spanError.classList.add('span-error')
             spanError.style.display = 'block'
@@ -32,3 +33,8 @@ document.addEventListener('DOMContentLoaded',function(){
         form.reset()
     })
 })
+
+
+
+
+

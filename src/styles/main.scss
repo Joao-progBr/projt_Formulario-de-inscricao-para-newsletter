@@ -87,6 +87,17 @@ body,html{
                 font-size: .9em;
                 font-weight: 700;
             }
+
+            .span-error{
+                color: red;
+                text-align: right;
+            }
+    
+        }
+        .input-error{
+            color: red;
+            border-color: red;
+            background-color: #ffdbdb;
         }
 
         input, &__btn{
@@ -103,23 +114,13 @@ body,html{
             border-color: hsl(0, 0%,58%);
         }
 
-        .span-error{
-            color: red;
-            text-align: right;
-            display: block;
-        }
-        
-        .input-error{
-            color: red;
-            border-color: red;
-            background-color: #ffdbdb;
-        }
         
         &__btn{
             @include mixins.btn;
         }
     }
-
+    
+    
 }
 
 

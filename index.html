@@ -60,19 +60,21 @@
         </div>
 
         <div class="message" id="successMessage" style="display: none;">
-            <img src="./build/assets/images/icon-success.svg" alt="">
-            <div class="message__successes">
-                <h2 class="message__successes__title">
-                    Thanks for subscribing!
-                </h2>
-                <p class="message__successes__pSuccesses">
-                    A confirmation email has been sent to <b><span id="userEmail"></span>.</b>
-                    Please open it and click the button inside to confirm your subscription.
-                </p>
+            <div class="message__content">
+                <img src="./build/assets/images/icon-success.svg" alt="">
+                <div class="message__successes">
+                    <h2 class="message__successes__title">
+                        Thanks for subscribing!
+                    </h2>
+                    <p class="message__successes__pSuccesses">
+                        A confirmation email has been sent to <b><span id="userEmail"></span>.</b>
+                        Please open it and click the button inside to confirm your subscription.
+                    </p>
+                </div>
+                <button type="button" class="message__btn" id="dismissBtn">
+                    Dismiss message
+                </button>
             </div>
-            <button type="button" class="message__btn" id="dismissBtn">
-                Dismiss message
-            </button>
         </div>
     </div>
 

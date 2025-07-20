@@ -1,13 +1,12 @@
 @use 'message';
 @use 'mixins';
-
+@use 'vars';
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
 
 // .roboto-<uniquifier> {
 //   font-family: "Roboto", sans-serif;
@@ -18,8 +17,8 @@
 //     "wdth" 100;
 // }
 
-body,html{
-    background-color: hsl(235, 18%, 26%);
+body{
+    background-color: vars.$DarkGrayishBlue;
     font-family: "Roboto", sans-serif;
 
 }
@@ -35,12 +34,9 @@ body,html{
 
     &__style{
         display: flex;
-        background-color: hsl(0, 0%, 100%);
+        background-color: vars.$white;
         border-radius: 2.5em;
-        // background-color: hsl(0, 0%, 100%);
         padding: 2em;
-        // border-radius: 2.5em;
-        // width: 60em;
     }
 }
 
@@ -52,12 +48,12 @@ body,html{
     &__title{
         font-weight: 800;
         font-size: 3.3em;
-        color:hsl(235, 18%, 26%);
+        color:vars.$DarkGrayishBlue;
     }
     
     &__join{
         margin-top: 2em;
-        color: hsl(235, 18%, 26%);
+        color: vars.$DarkGrayishBlue;
     }
 
     &__list{
@@ -69,7 +65,7 @@ body,html{
             align-items: center;
             gap: 1em;
             margin-top: 1em;
-            color: hsl(235, 18%, 26%);
+            color: vars.$DarkGrayishBlue;
         }
     }
 
@@ -92,15 +88,15 @@ body,html{
             .span-error{
                 font-size: .9em;
                 font-weight: 700;
-                color: red;
+                color: vars.$red;
                 text-align: right;
             }
         }
         
         .input-error{
-            color: red;
-            border-color: red;
-            background-color: #ffdbdb ;
+            color: vars.$red;
+            border-color: vars.$red;
+            background-color: vars.$LightPink;
         }
 
         input, &__btn{
@@ -108,13 +104,13 @@ body,html{
             padding: 1.4em;
             border-radius: 8px;
             font-size: 1em;
-            border: 1px solid hsl(0, 0%, 58%);
+            border: 1px solid vars.$MediumGray;
             outline: none;
             margin-top: 1em;
         }
         
         input{
-            border-color: hsl(0, 0%,58%);
+            border-color: vars.$MediumGray;
         }
 
         
@@ -125,10 +121,6 @@ body,html{
     
     
 }
-
-
-
-
 
 
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -150,17 +142,19 @@ body,html{
 }
 
 
-
-
 @media (max-width: 600px){
 
     body,html{
-        background-color: hsl(0, 0%, 100%); 
+        background-color: vars.$white; 
     }
 
      .container{
-         width: 90%;
-         min-height: 100%;
+        width: 90%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
          &__style{
             background-color: transparent;
             display: flex;
@@ -182,5 +176,16 @@ body,html{
     .description{
         padding: 2em;
         width: 100%;
+    }
+
+    .message{
+        height: 500px;
+        width: 100%;
+        border: none;
+        padding: 1em;
+
+        &__successes__title{
+            font-size: 3em;
+        }
     }
 }
